@@ -1,0 +1,5 @@
+package jabratech:interpolator-sabr;
+
+world interpolator-sabr {
+    export handler;
+}
