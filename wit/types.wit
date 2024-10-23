@@ -6,7 +6,7 @@ interface types {
     }
     
     record calibrate-sabr-response {
-        code: i16,
+        code: s16,
         message: string,
         data: list<sabr-calibrated-instrument>
     }
@@ -22,19 +22,19 @@ interface types {
     }
     
     record calibrate-sabr-greeks-response {
-        code: i16,
+        code: s16,
         message: string,
         data: list<sabr-calibrated-greek>
     }
     
     record sabr-calibrated-greek {
         name: string,
-        description: optional<string>,
+        description: option<string>,
         value: f64
     }
     
     record calibrate-sabr-volatility-summary-response {
-        code: i16,
+        code: s16,
         message: string,
         data: list<sabr-calibrated-volatility>
     }
