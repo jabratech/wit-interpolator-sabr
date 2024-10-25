@@ -1,8 +1,6 @@
 interface handler {
     use jabratech:common/types.{response};
-    use types.{calibrate-sabr-request, calibrate-sabr-response, calibrate-sabr-greeks-response, calibrate-sabr-volatility-summary-response};
+    use types.{calibrate-sabr-request, calibrate-sabr-response};
 
-    calibrate: func(request: calibrate-sabr-request) -> result<calibrate-sabr-response, response>;
-    calibrate-greeks: func(request: calibrate-sabr-request) -> result<calibrate-sabr-greeks-response, response>;
-    calibrate-volatility-summary: func(request: calibrate-sabr-request) -> result<calibrate-sabr-volatility-summary-response, response>;
+    get: func(request: calibrate-sabr-request) -> result<calibrate-sabr-response, response>;
 }
